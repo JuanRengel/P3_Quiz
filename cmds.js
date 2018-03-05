@@ -187,9 +187,7 @@ exports.playCmd = rl =>{
 
 
 exports.creditsCmd = rl =>{
-  log('Autores de la práctica: ');
-  log('Nombre 1: ', 'green');
-  log('Nombre 2: ', 'green');
+  log('JUAN', 'green');
   rl.prompt();
   };
 
