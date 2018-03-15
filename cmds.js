@@ -155,6 +155,9 @@ exports.testCmd = (rl, id) =>{
 	validateId(id)
 	.then(id => models.quiz.findById(id))
 	.then( quiz => {
+		if (!quiz) {
+			throw new Error(`No existe un quiz asociado al id=${id}.`);
+		}
 		return makeQuestion(rl, quiz.question + ": ")
 		.then(resp => {
 			if(resp.toLowerCase().trim() === quiz.answer.toLowerCase().trim()){
@@ -167,6 +170,9 @@ exports.testCmd = (rl, id) =>{
 			}
 		})
 	})
+	.catch(error => {
+  	errorlog(error.message);
+  })
 
 	.then(() =>{
 		rl.prompt();
