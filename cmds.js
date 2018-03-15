@@ -237,7 +237,7 @@ exports.testCmd = (rl, id) =>{
 };
 
 exports.playCmd = rl =>{
-	let score = 0; //preguntas que se han ido acertando
+/*	let score = 0; //preguntas que se han ido acertando
 	let preguntasQuedan = [];
 	let copy = []
 	copy = model.getAll();
@@ -283,7 +283,7 @@ exports.playCmd = rl =>{
 		}
 	};
 
-	playOne();
+	playOne();*/
 
 };
 
